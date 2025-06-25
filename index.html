@@ -1,113 +1,117 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>코코케이크 시흥은계점</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Noto Sans KR', sans-serif;
-      background: #fff;
-    }
-
-    header {
-      background: #f7135c;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      background: #fff;
-      border-bottom: 2px solid #f7135c;
-    }
-
-    nav a {
-      color: #000;
-      text-decoration: none;
-      padding: 15px 20px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #f7135c;
-    }
-
-    .hero {
-      background-image: url('https://via.placeholder.com/1600x600?text=코코케이크+시흥은계점');
-      background-size: cover;
-      background-position: center;
-      height: 600px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 36px;
-      font-weight: bold;
-      text-shadow: 2px 2px 4px #000;
-    }
-
-    .section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .cta {
-      background: #f7135c;
-      color: white;
-      padding: 20px;
-      font-size: 20px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    footer {
-      background: #222;
-      color: #ccc;
-      text-align: center;
-      padding: 20px 0;
-    }
-  </style>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS 애니메이션 -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
 </head>
-<body>
+<body class="font-sans text-gray-800">
 
-  <header>
-    <h1>코코케이크 시흥은계점</h1>
-    <p>신선한 생크림과 프리미엄 수제 케이크 전문점</p>
+  <!-- 헤더 -->
+  <header class="py-4 bg-white shadow-sm fixed w-full z-20">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <div class="text-2xl font-bold">코코케이크 시흥은계점</div>
+      <nav class="space-x-6">
+        <a href="#about" class="hover:text-pink-500">브랜드소개</a>
+        <a href="#menu" class="hover:text-pink-500">메뉴</a>
+        <a href="#store" class="hover:text-pink-500">매장안내</a>
+        <a href="#order" class="hover:text-pink-500">예약문의</a>
+        <a href="#location" class="hover:text-pink-500">오시는길</a>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="#">브랜드 소개</a>
-    <a href="#">메뉴</a>
-    <a href="#">매장 안내</a>
-    <a href="#">예약 문의</a>
-    <a href="#">오시는 길</a>
-  </nav>
+  <!-- Hero 섹션 -->
+  <section id="hero" class="h-screen bg-cover bg-center flex items-center justify-center" style="background-image:url('https://via.placeholder.com/1200x800?text=Coco+Cake');">
+    <div class="bg-black bg-opacity-50 p-8 rounded-lg text-center text-white" data-aos="fade-up">
+      <h1 class="text-5xl font-bold">신선함이 가득한 수제 케이크</h1>
+      <p class="mt-4 text-xl">시흥은계동 가성비 프리미엄 케이크</p>
+    </div>
+  </section>
 
-  <div class="hero">
-    대한민국 수제 케이크 전문 브랜드
-  </div>
+  <!-- 브랜드 소개 -->
+  <section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-4 max-w-3xl" data-aos="fade-right">
+      <h2 class="text-4xl font-bold mb-6">브랜드 소개</h2>
+      <p class="text-lg leading-relaxed">
+        코코케이크 시흥은계점은 생크림과 신선과일로 정성스럽게 만든 케이크와 다양한 파티용품을 함께 제공하여<br/>
+        특별한 순간을 더욱 풍성하게 만들어드리기 위해 노력하고 있습니다.<br/>
+        1만원대 가성비 케이크부터 캐릭터·레터링 케이크, 티아라/피규어 케이크까지 맞춤 주문이 가능합니다. :contentReference[oaicite:14]{index=14}
+      </p>
+    </div>
+  </section>
 
-  <div class="section">
-    <h2>브랜드 철학</h2>
-    <p>신선한 재료, 정성스러운 수제 작업, 고객 중심의 서비스로 행복을 전합니다.</p>
-  </div>
+  <!-- 메뉴 -->
+  <section id="menu" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h2 class="text-4xl font-bold mb-8 text-center" data-aos="fade-up">대표 메뉴</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-4 rounded-lg shadow" data-aos="zoom-in">
+          <img src="https://via.placeholder.com/400x300?text=송송후르츠케이크" alt="송송후르츠 케이크" class="rounded mb-4"/>
+          <h3 class="text-2xl font-semibold">송송후르츠 케이크</h3>
+          <p class="mt-2">가성비 좋은 생크림 + 과일 케이크</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow" data-aos="zoom-in" data-aos-delay="100">
+          <img src="https://via.placeholder.com/400x300?text=레터링케이크" alt="레터링 케이크" class="rounded mb-4"/>
+          <h3 class="text-2xl font-semibold">레터링/캐릭터 케이크</h3>
+          <p class="mt-2">이름/문구, 캐릭터 주문제작 가능</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow" data-aos="zoom-in" data-aos-delay="200">
+          <img src="https://via.placeholder.com/400x300?text=파티케이크" alt="파티 케이크" class="rounded mb-4"/>
+          <h3 class="text-2xl font-semibold">파티용 케이크</h3>
+          <p class="mt-2">티아라·피규어 토퍼 케이크</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <div class="section">
-    <h2>대표 메뉴</h2>
-    <p>생딸기 케이크, 오레오 생크림 케이크, 초코 생딸기 케이크 등 다양한 프리미엄 케이크</p>
-  </div>
+  <!-- 예약 및 상담 CTA -->
+  <section id="order" class="py-16 bg-pink-500 text-white text-center" data-aos="fade-up">
+    <h3 class="text-3xl font-bold mb-4">지금 바로 무료 상담 신청하세요</h3>
+    <p class="mb-6 text-xl">전화 / 카톡으로 빠른 상담 및 예약이 가능합니다.</p>
+    <a href="tel:0313152738" class="px-8 py-4 bg-yellow-400 text-black font-bold rounded-lg inline-block">☎ 031‑315‑2738 통화하기</a>
+  </section>
 
-  <div class="cta" onclick="alert('0507-1368-9462 로 전화해 주세요!')">
-    지금 바로 상담 신청 (0507-1368-9462)
-  </div>
+  <!-- 매장 안내 -->
+  <section id="store" class="py-20 bg-white" data-aos="fade-right">
+    <div class="container mx-auto px-4 max-w-2xl">
+      <h2 class="text-4xl font-bold mb-6 text-center">매장 안내</h2>
+      <ul class="text-lg space-y-3">
+        <li>📍 위치: 경기 시흥시 은계남로 12, 1층 146호</li>
+        <li>🕒 영업시간: 09:30 – 23:00</li>
+        <li>🚗 주차: 상가 지하주차장 (주차권 제공)</li>
+        <li>📞 문의전화: 031‑315‑2738</li>
+      </ul>
+    </div>
+  </section>
 
-  <footer>
-    &copy; 2025 코코케이크 시흥은계점 | 모든 권리 보유
+  <!-- 오시는 길 (지도) -->
+  <section id="location" class="py-20 bg-gray-50" data-aos="fade-up">
+    <div class="container mx-auto px-4 max-w-3xl text-center">
+      <h2 class="text-4xl font-bold mb-6">오시는 길</h2>
+      <div class="w-full h-64 rounded-lg overflow-hidden shadow">
+        <iframe
+          src="https://maps.google.com/maps?q=경기 시흥시 은계남로 12&amp;t=&amp;output=embed"
+          width="100%" height="100%" frameborder="0"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer class="py-8 bg-gray-800 text-gray-400 text-center">
+    <p>&copy; 2025 코코케이크 시흥은계점 | 연락: 031‑315‑2738</p>
+    <p>경기 시흥시 은계남로 12, 1층 146호</p>
   </footer>
+
+  <!-- AOS 스크립트 -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
 
 </body>
 </html>
